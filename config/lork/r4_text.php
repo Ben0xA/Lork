@@ -1,0 +1,37 @@
+<?php
+	define("R4ENTER", "You enter through the door and see a room with bookshelves lining all four walls. Stray pages from some of the books litter the ground amongst dust and half used candles. There is a carpet in the corner of the room. In the center of the room is a small wooden table with a weathered wooden chair. On the table are books and scrolls which are illegible to you.<br /><br>(*cough* no surprise there!)<br /><br>There is a candle holder on the table that has been covered in white wax from the many candles that it has held. All that remains in it's holder is a small black wick with barely any wax left. There are matches on the table.");
+	define("R4LOOK", "The table looks like it was built many years ago. You think it strange to find something this old in Mr. Fuzzing's room. The carpet is surprsingly clean. It doesn't have the same layer of dust on it that everything else does in this room.");
+	define("R4LOOKCARPET", "You notice a corner of the carpet is folded under. It almost looks as though the carpet is covering something.");
+	define("R4LOOKTRAPDOOR", "There is a trap door.");
+	define("BOOKLOOK", "Just some old books. You know those paper thingys your parents told you about. Not the intertubez or things that go beep beep beep. The battery life on these books is amazing! It never runs out. What does your kindle have on that?! Huh?!");
+	define("TABLELOOK", "The table looks like it was built many years ago. You think it strange to find something this old in Mr. Fuzzing's room.");
+	define("CARPETLOOK", "The carpet is surprsingly clean. It doesn't have the same layer of dust on it that everything else does in this room.");
+	define("CARPETMOVE", "You move the carpet which reveals a trap door that has been secured with a 4 digit combination lock.");
+	define("CARPETMOVED", "There's no need to move the carpet again. You leave it right where it is.");
+	define("CARPETLIGHT", "Oh yes. This is a fantastic idea. Let's light a carpet on fire in a room full of old books and paper. Let me go ahead and stop you right there. Go home, you're drunk!");
+	define("RUGMOVE", "It's a carpet... not a rug! Sheesh.");
+	define("CANDLEHOLDERLOOK", "It's a candle holder that has been covered in wax. There is a small piece of a candle in the holder.");
+	define("MATCHESLOOK", "It's a book of matches.");
+	define("MATCHESTAKE", "You pick up the matches from the table. These could prove useful!");
+	define("MATCHESTAKENOTFOUND", "You already have matches!");
+	define("MATCHESUNK", "I am not sure what you want to do with the matches. How about 'STRIKE' or 'LIGHT'?");
+	define("MATCH_ON", "You strike the match against the box. It glows red as it burns and ignites into a flame.");
+	define("MATCH_OFF", "The match slowly fades and extinguishes itself.");
+	define("LIGHTCANDLEHOLDER", "So. You want to light the 'metal' candle holder huh? Now, a normal person would attempt to light the candle inside. But not you. You'd rather take a match flame that is about 450°F to ignite the metal; regardless of the fact that it takes at least 1220°F to melt aluminum. /darknight_joker_slowclap.");
+	define("LIGHTCANDLE","You take the lit match and light the remaining candle in the candle holder. The match extinguishes itself.<br /><br />The flame from the candle burns an eerie blue which illuminates the papers on the desk. Something appears in the four corners on one of the pages on the desk upon which the number 85 had been written. In the upper left you see &lt;~3&lt;~&gt;. In the upper right you see &lt;~2#~&gt;. In the lower left you see &lt;~1&~&gt;. In the lower right you see &lt;~1B~&gt;. The four scripts glow blue which gives them a ghostly aura and then fade as the candle extinguishes itself.");
+	define("LIGHTCANDLE_NOTLIT","You attempt to light the candle with the unlit match. Once again, your intelligence has surfaced.");
+	define("LIGHTCANDLE_NOMATCHES","You attempt to rub your fingers together vigourously to generate a spark. Realizing how stupid this was, you think of another way you might ignite a flame to light the candle.");
+	define("TRAPDOOR", "It's a wooden trap door that is big enough for a person to fit through.");
+	define("TRAPDOORCLOSED", "It is secured by a 4 digit combination lock.");
+	define("TRAPDOOROPEN", "The trap door is open. There is a ladder descending DOWN.");
+	define("COMBOLOCK", "It's a combination lock with 4 dials for each number. Each dial has the numbers 0 through 9 on them.");
+	define("COMBOLOCKUSE", "You kneel down on the floor and begin to enter the 4 digit code on the combination lock. Type QUIT to stop using the combination lock.");
+	define("COMBOQUIT", "You stand up and decide to try to open the combination lock later.");
+	define("COMBOALREADYOPEN", "The trap door is already open. You don't need to use the combination lock again.");
+	define("COMBOOPEN", "With a click the combination lock unlatches. You remove the lock and open the trap door. There is a ladder descending DOWN.");
+	define("COMBOFAIL", "That code did not unlock the combination lock.");
+	define("TRIESLEFT", "Attempts Remaining: ");
+	define("COMBOTRAP", "After your third failed attempt, you hear a metal gear click. A beam swings from the ceiling knocking you in the head. You fall to the ground, smashing your flashlight. You feel the warmth of your blood as it runs down your face.");
+	define("PAPERLOOK", "It looks like a normal piece of paper from a book.");
+	define("FLAG2", "flag=1984?_Yeah_right_man_That's_a_typo_Orwell_is_here_now.");
+?>
