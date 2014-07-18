@@ -14,10 +14,10 @@
                 $command = substr(strtoupper($_SESSION['txt']), 0, MAXSTRLEN);
                 $base = BR . PROMPT . $command . BR;
                 $this->add($command);
-                $rtn = json_encode(array("DISPLAY"=>CNF, "BASE"=>$base));
+                $rtn = json_encode(array("DISPLAY"=>CNF, "BASE"=>$base), JSON_UNESCAPED_SLASHES);
                 switch($command) {
                     case "HELP":
-                        $rtn = strip_tags(json_encode(array("DISPLAY"=>$this->cmds->getHelp(),"BASE"=>$base,"ROOM"=>(isset($_SESSION['room']) ? $_SESSION['room'] : ""),"POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0))), ALLOWEDTAGS);
+                        $rtn = strip_tags(json_encode(array("DISPLAY"=>$this->cmds->getHelp(),"BASE"=>$base,"ROOM"=>(isset($_SESSION['room']) ? $_SESSION['room'] : ""),"POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0)), JSON_UNESCAPED_SLASHES), ALLOWEDTAGS);
                         break;
                     default:
                         $rtn = strip_tags($this->cmds->getCommand($command), ALLOWEDTAGS);                       

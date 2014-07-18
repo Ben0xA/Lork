@@ -8,7 +8,7 @@
 	define("THATDOESNTWORK", "That doesn't work.");
 	define("SWPAG", "SHALL WE PLAY A GAME?");
 
-	define("ALLOWEDTAGS", "<BR><BR /><B></B><TABLE><TR><TD><FONT> ");
+	define("ALLOWEDTAGS", "<BR><B><TABLE><TR><TD><FONT>");
 	define("BR", "<BR />");
 	define("PROMPT", "&gt;&nbsp;");
 

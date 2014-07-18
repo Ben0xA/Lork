@@ -19,7 +19,7 @@
         public function getCommand($command) {
             $command = substr($command, 0, MAXSTRLEN);        	
             $base = BR . PROMPT . $command . BR;
-            $rtn = json_encode(array("DISPLAY"=>CNF, "BASE"=>$base, "ROOM"=>(isset($_SESSION['room']) ? $_SESSION['room'] : ""), "POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0)));
+            $rtn = json_encode(array("DISPLAY"=>CNF, "BASE"=>$base, "ROOM"=>(isset($_SESSION['room']) ? $_SESSION['room'] : ""), "POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0)), JSON_UNESCAPED_SLASHES);
             $rtnarr = array();
             $room = null;
             if(isset($_SESSION['room'])) {
@@ -36,7 +36,7 @@
                         unset($_SESSION['points']);
                         unset($_SESSION['doors']);
                         unset($_SESSION['roomitem']);
-                        $rtn = strip_tags(json_encode(array("RESPONSE"=>"EXIT","DISPLAY"=>WELCOME . BR . SWPAG . BR,"ROOM"=>"","POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0))), ALLOWEDTAGS);
+                        $rtn = strip_tags(json_encode(array("RESPONSE"=>"EXIT","DISPLAY"=>WELCOME . BR . SWPAG . BR,"ROOM"=>"","POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0)), JSON_UNESCAPED_SLASHES), ALLOWEDTAGS);
                     }
                     else {
                         $rtnarr = (array)$room->getCommand($command);    
@@ -54,7 +54,7 @@
                             $room = new r1();
                             $_SESSION['score'] = true;
                             $_SESSION['room'] = "r1";
-                            $rtn = strip_tags(json_encode(array("RESPONSE"=>"START","DISPLAY"=>$room->enterText(),"ROOM"=>$_SESSION['room'],"POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0))), ALLOWEDTAGS);
+                            $rtn = strip_tags(json_encode(array("RESPONSE"=>"START","DISPLAY"=>$room->enterText(),"ROOM"=>$_SESSION['room'],"POINTS"=>(isset($_SESSION['points']) ? $_SESSION['points'] : 0)), JSON_UNESCAPED_SLASHES), ALLOWEDTAGS);
                             break;                        
                         default:
                             $rtnarr = (array)$_SESSION['commands'][$command];                                             
@@ -73,7 +73,7 @@
                     $rtnarr["ROOM"] = "";
                 }
                 $rtnarr["POINTS"] = (isset($_SESSION['points']) ? $_SESSION['points'] : 0);
-                $rtn = strip_tags(json_encode($rtnarr), ALLOWEDTAGS);    
+                $rtn = strip_tags(json_encode($rtnarr, JSON_UNESCAPED_SLASHES), ALLOWEDTAGS);
             }                   	       	
         	return $rtn;
         }
